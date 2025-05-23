@@ -8,9 +8,13 @@ body {
     display: none;
 }
 
-
 .navbar {
-    background-color: rgba(237, 237, 221, 0.27);
+    position: sticky;
+    top: 0;
+    left: 0%;
+    right: 0%;
+    z-index: 9999;
+    background-color: rgba(75, 106, 103);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,13 +34,33 @@ body {
 }
 
 .nav-right a {
-    transition-property: color font-size;
-    transition-duration: 0.3s;
+    position: relative;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s, font-size 0.3s;
+    text-decoration: none;
+}
+
+.nav-right a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondcolor);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
 }
 
 .nav-right a:hover {
-    color: var(--maincolor);
-    font-size: 20px;
+    transform: scale(1.05);
+
+}
+
+.nav-right a:hover::after {
+    transform: scaleX(1);
 }
 
 .nav-left {
@@ -52,46 +76,187 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-family: var(--mainfont);
-    transition-property: background-color color width height;
-    transition-duration: 0.3s;
+    transition: all 0.3s ease;
+    transition-property: background-color color;
+
 }
 
 .contact-button:hover {
     background-color: var(--maincolor);
+    transform: scale(1.05);
     color: white;
-    width: 120px;
     height: 40px;
-}
+    box-shadow: 0 0 20px black;
 
+}
 
 .logo {
     font-size: 24px;
     margin-left: 10px;
 }
 
-.second-logo {
-    margin: 20px 0px;
+.title{
+    margin-bottom: 30px;
 }
 
+@media screen and (min-width:0px) and (max-width:700px) {
+
+    .nav-right a,
+    .contact-button {
+        display: none;
+    }
+
+
+    .bars {
+        display: block;
+    }
+
+}
+
+/*end navbar*/
+
+
+
+
+/*start sections*/
+.second-logo {
+    margin: 50px 0px 25px 0px;
+}
+
+.sections .row {
+    justify-content: space-evenly;
+}
 
 .section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 470px;
+    font-size: 22px;
+    color: var(--maincolor);
     background-color: rgba(237, 237, 221, 1);
     border-radius: 50px;
-    padding: 30px 100px;
-    transition-property: background-color color;
-    transition-duration: 0.3s;
+    padding: 30px 80px;
     margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    transition-property: background-color color;
 }
 
 .section h2 {
-    font-size: 28px;
-    font-weight: 400;
+    color: var(--maincolor);
+    font-weight: 300;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -35%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(0deg,
+            transparent,
+            transparent 30%,
+            rgba(237, 237, 221, 0.27));
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
 }
 
 .section:hover {
-    background-color: rgba(237, 237, 221, 0.27);
+    background-color: rgba(237, 237, 221, 0.25);
+    color: var(--secondcolor);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px black;
+}
+
+.section:hover h2 {
     color: var(--secondcolor);
 }
+
+.section:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+}
+
+@media screen and (min-width:0px) and (max-width:1024px) {
+
+    .second-logo img {
+        width: 200px;
+        height: 250px;
+    }
+
+    .section {
+        width: 350px;
+        padding: 30px 60px;
+
+    }
+
+    .section h2 {
+        font-size: 22px;
+         font-weight: 400;
+    }
+}
+
+
+@media screen and (min-width:0px) and (max-width:768px) {
+
+    .second-logo img {
+        width: 175px;
+        height: 225px;
+    }
+
+    .section {
+        width: 325px;
+        padding: 30px 60px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+         font-weight: 400;
+    }
+
+}
+
+@media screen and (min-width:0px) and (max-width:660px) {
+
+    .second-logo img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .section {
+        width: 255px;
+        padding: 30px 60px;
+    }
+
+    .section h2 {
+        font-size: 16px;
+         font-weight: 400;
+    }
+
+}
+
+@media screen and (min-width:0px) and (max-width:560px){
+
+ .second-logo img {
+        width: 125px;
+        height: 150px;
+    }
+
+    .section {
+        width: 220px;
+        padding: 30px 50px;
+    }
+
+    .section h2 {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+}
+/*end sections*/
