@@ -95,8 +95,12 @@ body {
     margin-left: 10px;
 }
 
-.title{
-    margin-bottom: 30px;
+.title h1 {
+    font-family: var(--mainfont);
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 @media screen and (min-width:0px) and (max-width:700px) {
@@ -123,8 +127,12 @@ body {
     margin: 50px 0px 25px 0px;
 }
 
+.sections {
+    width: 100%;
+}
+
 .sections .row {
-    justify-content: space-evenly;
+    gap: 20px;
 }
 
 .section {
@@ -134,7 +142,6 @@ body {
     background-color: rgba(237, 237, 221, 1);
     border-radius: 50px;
     padding: 30px 80px;
-    margin-bottom: 20px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -183,7 +190,25 @@ body {
     transform: rotate(-45deg) translateY(100%);
 }
 
+.major {
+    width: 350px;
+    font-size: 20px;
+}
+
+@media screen and (min-width:0px) and (max-width:1152px) {
+
+
+    .title h1 {
+        font-size: 45px;
+    }
+}
+
 @media screen and (min-width:0px) and (max-width:1024px) {
+
+
+    .title h1 {
+        font-size: 40px;
+    }
 
     .second-logo img {
         width: 200px;
@@ -191,19 +216,20 @@ body {
     }
 
     .section {
-        width: 350px;
+        width: 370px;
         padding: 30px 60px;
 
     }
 
     .section h2 {
-        font-size: 22px;
-         font-weight: 400;
+        font-size: 25px;
+        font-weight: 400;
     }
+
 }
 
-
 @media screen and (min-width:0px) and (max-width:768px) {
+
 
     .second-logo img {
         width: 175px;
@@ -211,13 +237,17 @@ body {
     }
 
     .section {
-        width: 325px;
+        width: 350px;
         padding: 30px 60px;
     }
 
     .section h2 {
-        font-size: 20px;
-         font-weight: 400;
+        font-size: 23px;
+    }
+
+
+    .title h1 {
+        font-size: 38px;
     }
 
 }
@@ -230,33 +260,74 @@ body {
     }
 
     .section {
-        width: 255px;
-        padding: 30px 60px;
+        width: 325px;
+        padding: 25px 55px;
     }
 
     .section h2 {
-        font-size: 16px;
-         font-weight: 400;
+        font-size: 20px;
     }
 
+    .title h1 {
+        font-size: 36px;
+    }
 }
 
-@media screen and (min-width:0px) and (max-width:560px){
+@media screen and (min-width:0px) and (max-width:560px) {
 
- .second-logo img {
+    .second-logo img {
         width: 125px;
         height: 150px;
     }
 
     .section {
-        width: 220px;
-        padding: 30px 50px;
+        width: 270px;
+        padding: 25px 35px;
     }
 
     .section h2 {
-        font-size: 14px;
-        font-weight: 400;
+        font-size: 18px;
     }
 
 }
+
 /*end sections*/
+
+
+
+/*start comp1*/
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title .row {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cards .container {
+    width: 95%;
+}
+
+.cards .row {
+    gap: 25px;
+}
+
+.cards {
+    margin-bottom: 50px;
+}
+
+.card {
+    width: 285px;
+    height: 225px;
+    background-color: rgba(237, 237, 221, 1);
+    border-radius: 20px;
+    transition: all .2s;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 35px 10px rgb(0, 0, 0);
+    transform: scale(1.04);
+    border-radius: 20px;
+}
