@@ -20,8 +20,6 @@ body {
     align-items: center;
     padding: 10px 40px;
     box-shadow: 0px -10px 30px 15px #000000;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
     margin-bottom: 40px;
 }
 
@@ -122,6 +120,9 @@ body {
 
 
 
+
+
+
 /*start sections*/
 .second-logo {
     margin: 50px 0px 25px 0px;
@@ -129,6 +130,12 @@ body {
 
 .sections {
     width: 100%;
+    margin-bottom: 100px;
+
+}
+
+.sections .container {
+    width: 85%;
 }
 
 .sections .row {
@@ -291,7 +298,27 @@ body {
 
 }
 
+@media screen and (min-width:0px) and (max-width:425px) {
+
+    .title h1 {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (min-width:0px) and (max-width:375px) {
+
+    .title h1 {
+        font-size: 25px;
+    }
+
+}
+
 /*end sections*/
+
+
+
+
 
 
 
@@ -299,6 +326,7 @@ body {
 
 .section-title {
     margin-bottom: 60px;
+    font-size: larger;
 }
 
 .section-title .row {
@@ -306,28 +334,95 @@ body {
     gap: 10px;
 }
 
-.cards .container {
-    width: 95%;
-}
-
 .cards .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
 }
 
 .cards {
-    margin-bottom: 50px;
+    margin: 20px 45px;
+    ;
 }
 
 .card {
-    width: 285px;
-    height: 225px;
-    background-color: rgba(237, 237, 221, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 220px;
+    background-color: #ededdc;
     border-radius: 20px;
+    padding: 20px;
+    text-align: center;
     transition: all .2s;
 }
 
 .card:hover {
-    box-shadow: 0px 0px 35px 10px rgb(0, 0, 0);
-    transform: scale(1.04);
-    border-radius: 20px;
+    box-shadow: 0px 0px 20px 5px rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+
+.card h3 {
+    width: 100%;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 400;
+    color: black;
+    margin-top: 15px;
+}
+
+.btn-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: auto;
+    margin-bottom: 20px;
+
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: var(--mainfont);
+    border: none;
+    cursor: pointer;
+    text-align: right;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.dropbtn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #afadad5c;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.dropbtn:hover::after {
+    transform: scaleX(1);
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+.arrow {
+    margin: auto;
 }
