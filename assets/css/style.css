@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    padding: 15px 40px;
     box-shadow: 0px -10px 30px 15px #000000;
     margin-bottom: 40px;
 }
@@ -34,13 +34,26 @@ body {
 .nav-right a {
     position: relative;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     transition: color 0.3s, font-size 0.3s;
     text-decoration: none;
 }
 
 .nav-right a::after {
     content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondcolor);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.nav-right a:first-of-type::after{
+        content: '';
     position: absolute;
     bottom: -4px;
     right: 0;
@@ -89,7 +102,7 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    width: 50px;
     margin-left: 10px;
 }
 
@@ -100,6 +113,87 @@ body {
     margin-top: 20px;
     margin-bottom: 50px;
 }
+
+/* السهم جنب "الأقسام" */
+.arrow {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+/* حاوية القائمة المنسدلة */
+.dropdown {
+    position: relative;
+}
+
+/* القائمة المنسدلة نفسها */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 12px;
+    top: 120%;
+    right: 0;
+    background-color: rgb(3 22 21 / 63%);
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.dropdown-content a::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 14px;
+    width: 80%;
+    height: 1px;
+    background-color: var(--secondcolor);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+/* الروابط داخل القائمة */
+.dropdown-content a {
+    color: #ffffff;
+    padding: 20px 17px;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: var(--mainfont);
+    border-radius: 8px;
+    text-align: right;
+}
+
+/* تأثير hover على الروابط
+.dropdown-content a:hover {
+    background-color: var(--maincolor);
+    color: white;
+}
+*/
+
+/* إظهار القائمة عند المرور */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 60px;
+    background-color: rgb(3 22 21 / 63%);
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+
 
 @media screen and (min-width:0px) and (max-width:700px) {
 
@@ -423,6 +517,13 @@ body {
 
 }
 
+.the_link {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 .arrow {
-    margin: auto;
+    font-size: medium;
+
 }
