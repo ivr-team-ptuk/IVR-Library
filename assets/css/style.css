@@ -8,6 +8,10 @@ body {
     display: none;
 }
 
+.bars i {
+    color: rgba(237, 237, 221, 1);
+}
+
 .navbar {
     position: sticky;
     top: 0;
@@ -52,8 +56,8 @@ body {
     transition: transform 0.4s ease;
 }
 
-.nav-right a:first-of-type::after{
-        content: '';
+.nav-right a:first-of-type::after {
+    content: '';
     position: absolute;
     bottom: -4px;
     right: 0;
@@ -82,8 +86,8 @@ body {
 .contact-button {
     background-color: #f1f4e9;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 15px 30px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 16px;
     font-family: var(--mainfont);
@@ -96,7 +100,6 @@ body {
     background-color: var(--maincolor);
     transform: scale(1.05);
     color: white;
-    height: 40px;
     box-shadow: 0 0 20px black;
 
 }
@@ -112,6 +115,7 @@ body {
     font-weight: 400;
     margin-top: 20px;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 /* السهم جنب "الأقسام" */
@@ -165,13 +169,6 @@ body {
     text-align: right;
 }
 
-/* تأثير hover على الروابط
-.dropdown-content a:hover {
-    background-color: var(--maincolor);
-    color: white;
-}
-*/
-
 /* إظهار القائمة عند المرور */
 .dropdown:hover .dropdown-content {
     display: block;
@@ -194,6 +191,24 @@ body {
 }
 
 
+@media screen and (min-width:0px) and (max-width:800px) {
+    .navbar {
+        padding: 10px 40px;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    .nav-right a {
+        font-size: 18px;
+    }
+
+    .contact-button {
+        padding: 10px 25px;
+        border-radius: 25px;
+    }
+}
 
 @media screen and (min-width:0px) and (max-width:700px) {
 
@@ -382,8 +397,8 @@ body {
     }
 
     .section {
-        width: 270px;
-        padding: 25px 35px;
+        width: 290px;
+        padding: 25px 40px;
     }
 
     .section h2 {
@@ -392,21 +407,103 @@ body {
 
 }
 
-@media screen and (min-width:0px) and (max-width:425px) {
+@media screen and (min-width:0px) and (max-width:450px) {
+
+    .second-logo img {
+        width: 120px;
+        height: 145px;
+    }
+
+    .section {
+        width: 265px;
+        padding: 22px 32px;
+    }
+
+    .section h2 {
+        font-size: 16px;
+    }
 
     .title h1 {
-        font-size: 30px;
+        font-size: 28px;
+    }
+
+    .sections .row {
+        gap: 15px;
+    }
+
+    .sections {
+        margin-bottom: 60px;
+    }
+
+    .card {
+        width: 230px;
+        height: 200px;
+        border-radius: 20px;
+        padding: 16px;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:380px) {
+
+    .second-logo img {
+        width: 115px;
+        height: 140px;
+    }
+
+    .section {
+        width: 255px;
+        padding: 18px 25px;
+    }
+
+    .section h2 {
+        font-size: 14px;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+
+    .card {
+        width: 220px;
+        height: 190px;
+        border-radius: 20px;
+        padding: 12px;
+    }
+
+    .card h3 {
+        height: 90px;
+        font-size: 22px;
+        margin-top: 10px;
     }
 
 }
 
-@media screen and (min-width:0px) and (max-width:375px) {
+@media screen and (min-width:0px) and (max-width:340px) {
+
+    .second-logo img {
+        width: 110px;
+        height: 130px;
+    }
+
+    .section {
+        width: 245px;
+        padding: 15px 20px;
+    }
+
+    .section h2 {
+        font-size: 14px;
+    }
 
     .title h1 {
-        font-size: 25px;
+        font-size: 18px;
+    }
+
+    .sections .row {
+        gap: 10px;
     }
 
 }
+
 
 /*end sections*/
 
