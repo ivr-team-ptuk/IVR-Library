@@ -100,7 +100,7 @@ body {
     background-color: var(--maincolor);
     transform: scale(1.05);
     color: var(--secondcolor);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
