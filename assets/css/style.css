@@ -84,7 +84,7 @@ body {
 }
 
 .contact-button {
-    background-color: #f1f4e9;
+    background-color: var(--secondcolor);
     border: none;
     padding: 15px 30px;
     border-radius: 30px;
@@ -100,7 +100,7 @@ body {
     background-color: var(--maincolor);
     transform: scale(1.05);
     color: var(--secondcolor);
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
