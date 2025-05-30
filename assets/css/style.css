@@ -99,9 +99,8 @@ body {
 .contact-button:hover {
     background-color: var(--maincolor);
     transform: scale(1.05);
-    color: white;
-    box-shadow: 0 0 20px black;
-
+    color: var(--secondcolor);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
