@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --maincolor: rgba(8, 60, 58, 1);
+    --secondcolor: rgba(237, 237, 221, 1);
+    --mainfont: "Almarai", sans-serif;
+}
+
+body {
+    font-family: var(--mainfont);
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
