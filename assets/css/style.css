@@ -108,13 +108,13 @@ body {
 }
 
 .second-logo svg{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 10px;
 }
 .second-logo h1{
     font-family: var(--mainfont);
-    font-color: var(--secondcolor);
+    color: var(--secondcolor);
     font-size: 50px;
 }
 
