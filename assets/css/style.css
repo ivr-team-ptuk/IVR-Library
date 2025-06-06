@@ -107,6 +107,12 @@ body {
     margin-left: 10px;
 }
 
+.logo svg{
+    width: 44px;
+    height: 54px;
+    margin-left: 10px;
+}
+
 .title h1 {
     font-family: var(--mainfont);
     font-size: 50px;
