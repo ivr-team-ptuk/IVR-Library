@@ -107,6 +107,17 @@ body {
     margin-left: 10px;
 }
 
+.second-logo svg{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.second-logo h1{
+    font-family: var(--mainfont);
+    font-color: var(--secondcolor);
+    font-size: 50px;
+}
+
 .logo svg{
     width: 44px;
     height: 54px;
