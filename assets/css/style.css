@@ -114,7 +114,8 @@ body {
 }
 .second-logo h1{
     color: var(--secondcolor);
-    font-size: 50px;
+    font-size: 40px;
+    font-family: monospace, Arial;
 }
 
 .logo svg{
