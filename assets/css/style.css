@@ -646,7 +646,7 @@ body {
 .cont{
     display: flex;
     gap: 12px;
-    justify-content: flex-start;
+    justify-content: center;
 }
 /*end contact*/
 
@@ -692,7 +692,7 @@ body {
 }
 
 .card:hover {
-   box-shadow: 0px 0px 10px 0px rgb(158, 163, 159);
+   box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
     transform: scale(1.04);
 }
 .card h3 {
