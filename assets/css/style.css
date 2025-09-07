@@ -642,11 +642,63 @@ body {
 
 
 /*start contact*/
-
-.cont{
-    display: flex;
-    gap: 12px;
-    justify-content: center;
+.sections .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .sections .container {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+.social-section {
+  text-align: center;
+  padding: 30px 20px;
+  border: 1px solid #555;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.social-section:hover {
+  background-color: rgba(255,255,255,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transform: translateY(-3px);
+}
+.social-section h2 {
+  color: #f1f1e6;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.social-icons a {
+  font-size: 35px;
+  color: #f1f1e6;
+  transition: 0.3s;
+}
+.social-icons a.facebook:hover {
+  color: #1877f2;
+}
+.social-icons a.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, 
+    #fdf497 0%, 
+    #fdf497 5%, 
+    #fd5949 45%, 
+    #d6249f 60%, 
+    #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+}
+.social-icons a.telegram:hover {
+  color: #0088cc;
 }
 /*end contact*/
 
