@@ -642,7 +642,7 @@ body {
 
 
 /*start contact*/
-.sections .container {
+.sectionss .container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -651,7 +651,7 @@ body {
   padding: 20px;
 }
 @media (min-width: 768px) {
-  .sections .container {
+  .sectionss .container {
     grid-template-columns: 1fr 1fr; 
   }
 }
