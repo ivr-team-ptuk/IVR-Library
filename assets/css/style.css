@@ -668,7 +668,7 @@ body {
   transform: translateY(-3px);
 }
 .social-section h2 {
-  color: #f1f1e6;
+  color: var(--secondcolor);
   margin-bottom: 20px;
   font-size: 20px;
 }
