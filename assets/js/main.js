@@ -87,3 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+document.querySelectorAll('a.the_link').forEach(link => {
+  link.setAttribute('target', '_blank');
+});
