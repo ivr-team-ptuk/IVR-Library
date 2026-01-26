@@ -88,8 +88,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.querySelectorAll('a.the_link').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.stopPropagation();
-    window.open(link.href, '_blank');
-  });
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); 
+    e.stopPropagation();  
+
+    const url = this.getAttribute('href');
+    window.open(url, '_blank', 'noopener,noreferrer');
+
+    return false;
+  }, true);
 });
