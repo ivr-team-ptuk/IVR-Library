@@ -86,6 +86,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-document.querySelectorAll('a').forEach(a => {
-    a.setAttribute('target', '_blank');
-  });
+
