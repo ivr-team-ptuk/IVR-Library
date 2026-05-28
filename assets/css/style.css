@@ -43,6 +43,13 @@ body {
     font-size: 18px;
 }
 
+.nav-right-logo {
+    display: flex;
+    align-items: center;
+    color: var(--secondcolor);
+    font-size: 18px;
+}
+
 .nav-right a {
     position: relative;
     color: var(--secondcolor);
