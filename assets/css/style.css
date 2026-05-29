@@ -7,6 +7,7 @@ body {
 
 .bars {
     display: none;
+    flex: 0 0 auto;
 }
 
 .bars i {
@@ -54,6 +55,7 @@ body {
 .nav-left {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .nav-left a {
@@ -112,6 +114,7 @@ body {
     width: 44px;
     height: 54px;
     margin-left: 10px;
+    object-fit: contain;
 }
 
 .second-logo svg{
@@ -130,6 +133,7 @@ body {
     width: 44px;
     height: 54px;
     margin-left: 10px;
+    display: block;
 }
 
 .title h1 {
@@ -316,22 +320,34 @@ body {
 
 @media screen and (min-width:0px) and (max-width:800px) {
     #navbar-placeholder {
-        min-height: 100px;
+        min-height: 82px;
     }
 
     .navbar {
-        padding: 10px 40px;
+        padding: 10px 18px;
+        gap: 14px;
+    }
+
+    .nav-right {
+        min-width: 0;
+        flex: 1 1 auto;
     }
 
     .logo {
-    width: auto;
-    height: 60px;
-    margin-left: 10px;
+        width: 88px;
+        height: 42px;
+        margin-left: 0;
+        flex: 0 0 auto;
     }
 
-    .logo svg {
+    .logo svg,
+    .logo img {
+        display: block;
         height: 100%;
-        width: auto;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        object-fit: contain;
     }
 
 
@@ -352,11 +368,35 @@ body {
         display: none;
     }
 
-
-    .bars {
-        display: block;
+    .nav-right .main,
+    .nav-right .dropdown {
+        display: none;
     }
 
+    .bars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+    }
+
+}
+
+@media screen and (max-width:380px) {
+    .navbar {
+        padding: 8px 12px;
+    }
+
+    .logo {
+        width: 72px;
+        height: 36px;
+    }
+
+    .bars {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 /*end navbar*/
