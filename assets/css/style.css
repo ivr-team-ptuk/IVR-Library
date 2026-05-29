@@ -111,8 +111,8 @@ body {
 }
 
 .logo img{
-    width: 44px;
-    height: 54px;
+    width: 56px;
+    height: 66px;
     margin-left: 10px;
     object-fit: contain;
 }
@@ -130,8 +130,8 @@ body {
 }
 
 .logo svg{
-    width: 44px;
-    height: 54px;
+    width: 56px;
+    height: 66px;
     margin-left: 10px;
     display: block;
 }
